@@ -52,3 +52,23 @@ https://github.com/testdrivenio/fastapi-celery
 https://scikit-learn.org/stable/modules/multiclass.html
 https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier
 
+
+### Project content:
+- ml_api/model.ipynb - data EDA, feature engineering, data markup, sklearn model build and serialize
+- ml_api/project/data/ - data for model
+- ml_api/project/ml_models - serialized models
+- ml_api/project/main.py - FastAPI app initialization
+- ml_api/project/worker.py - celery worker with redis backend
+- ml_api/project/tasks.py - predict task for celery worker
+- ml_api/project/data_prep.py - data from request prepare for inference
+- ml_api/project/main.py
+
+### Model details
+Current version of model created to map requests to attack categories (not all known attacks):
+- SQL injection
+- Remote Code Execution
+- Path Traversal
+  
+Data was marked up based on suspicious content in MATCHED_VARIABLE_VALUE request feature.  
+For model generalization and adaptation top unknown keywords, only some general features were used in model learning.  
+On 0.67/0.33 random train/test split model achieved 0.953 accuracy, and believed this metric can be enhanced.  
