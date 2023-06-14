@@ -71,4 +71,8 @@ Current version of model created to map requests to attack categories (not all k
   
 Data was marked up based on suspicious content in MATCHED_VARIABLE_VALUE request feature.  
 For model generalization and adaptation top unknown keywords, only some general features were used in model learning.  
-On 0.67/0.33 random train/test split model achieved 0.953 accuracy, and believed this metric can be enhanced.  
+On 0.67/0.33 random train/test split model achieved 0.953 accuracy, and believed this metric can be enhanced. 
+
+### Why?
+https://heyiamsasha.notion.site/ML-PT-0bc4ce5012604ed397f040a1bdc29858  
+https://heyiamsasha.notion.site/ML-Positive-Technologies-a8016572d97c4eabac99fbdce5b81271 
